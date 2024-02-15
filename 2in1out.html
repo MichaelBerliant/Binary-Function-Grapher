@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Binary Function Grapher</title>
+    <meta charset="utf-8">
+    <style>
+      @font-face {
+      font-family: 'Roboto Regular';
+        src: url(./Roboto-Regular.ttf);
+      }
+      body {
+        height: 100%;
+        margin: 0;
+        background-image: linear-gradient(to bottom, #3526bd, #847fb5);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .tx {
+        margin: 7px;
+        height: 2vmax;
+        rows="5";
+        cols="40";
+        border: none;
+        outline: none;
+        border-radius: 0px;
+        opacity: 0.7;
+        resize: none;
+      }
+      .in {
+        margin: 7px;
+        padding-right: 0.5vmax;
+        padding-left: 0.5vmax;
+        border-radius: 4px;
+        font-family: 'Roboto Regular', sans-serif;
+        font-size: 0.9vmax;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 0.2vmax;
+      }
+      .in:hover {
+        color: lime;
+      }
+      .d {
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        transform: translate(-50%, 0%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d">
+      <textarea class="tx" style="width: 30vmax;" type="text" id="function-input" placeholder="Equation Output"></textarea>
+      <textarea class="tx" style="width: 5vmax;" type="text" id="scope" placeholder="Scope"></textarea>
+      <a class="in" onclick="info()">Program <br> Info</a>
+      <a href="./list.txt" class="in" target="_blank">Operator <br> List</a>
+      <a class="in" onclick="examples()">Example <br> Functions</a>
+    </div>
+
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r128/build/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r128/examples/js/controls/OrbitControls.js"></script>
+    <script src="2in1out.js"></script>
+  </body>
+</html>
